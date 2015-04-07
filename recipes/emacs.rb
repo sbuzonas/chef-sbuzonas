@@ -24,7 +24,7 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 # THE SOFTWARE.
 
-when value_for_platform('ubuntu' => { '> 14.04' => true })
+if value_for_platform('ubuntu' => { '> 14.04' => true })
   apt_repository 'emacs24-ppa' do
     uri 'http://ppa.launchpad.net/cassou/emacs/ubuntu'
     distribution node['lsb']['codename']
